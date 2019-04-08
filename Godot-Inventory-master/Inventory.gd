@@ -1,24 +1,34 @@
 extends GridContainer;
 const ItemClass = preload("Item.gd");
-const ItemSlotClass = preload("res://ItemSlot.gd");
+const ItemSlotClass = preload("res://Godot-Inventory-master/ItemSlot.gd");
 
-const slotTexture = preload("res://images/skil.png");
+const slotTexture = preload("res://Godot-Inventory-master/images/skil.png");
+
+#form array of images that can be called and created inside a dictionary
 const itemImages = [
-	preload("res://images/Ac_Ring05.png"),
-	preload("res://images/A_Armor05.png"),
-	preload("res://images/A_Armour02.png"),
-	preload("res://images/A_Shoes03.png"),
-	preload("res://images/C_Elm03.png"),
-	preload("res://images/E_Wood02.png"),
-	preload("res://images/P_Red02.png"),
-	preload("res://images/W_Sword001.png")
+	#Item 0
+	preload("res://Godot-Inventory-master/images/Ac_Ring05.png"),
+	#Item 1
+	preload("res://Godot-Inventory-master/images/A_Armor05.png"),
+	#Item 2
+	preload("res://Godot-Inventory-master/images/A_Armour02.png"),
+	#Item 3
+	preload("res://Godot-Inventory-master/images/A_Shoes03.png"),
+	#Item 4
+	preload("res://Godot-Inventory-master/images/C_Elm03.png"),
+	#Item 5
+	preload("res://Godot-Inventory-master/images/E_Wood02.png"),
+	#Item 6
+	preload("res://Godot-Inventory-master/images/P_Red02.png"),
+	#Item 7
+	preload("res://Godot-Inventory-master/images/W_Sword001.png")
 ];
 
 const itemDictionary = {
 	0: {
-		"itemName": "Ring",
+		"itemName": "Shoe",
 		"itemValue": 456,
-		"itemIcon": itemImages[0]
+		"itemIcon": itemImages[3]
 	},
 	1: {
 		"itemName": "Sword",
@@ -44,7 +54,7 @@ func _ready():
 		var itemValue = itemDictionary[item].itemValue;
 		itemList.append(ItemClass.new(itemName, itemIcon, null, itemValue));
 	
-	for i in range(20):
+	for i in range(7):
 		var slot = ItemSlotClass.new(i);
 		slotList.append(slot);
 		add_child(slot);
