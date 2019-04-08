@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/skil.png-7c4c17957311302291a302b21a4b2593.stex"
+path="res://.import/skil.png-44b6f1d4682b52c1fc3f3cbf180a62b9.stex"
 
 [deps]
 
-source_file="res://images/skil.png"
-dest_files=[ "res://.import/skil.png-7c4c17957311302291a302b21a4b2593.stex" ]
+source_file="res://Godot-Inventory-master/images/skil.png"
+dest_files=[ "res://.import/skil.png-44b6f1d4682b52c1fc3f3cbf180a62b9.stex" ]
 
 [params]
 

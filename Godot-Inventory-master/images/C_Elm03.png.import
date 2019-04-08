@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/C_Elm03.png-2b413a2f8965f2fc556d0e1e33e8b260.stex"
+path="res://.import/C_Elm03.png-9cb835bb921486d83613ddd8998dca50.stex"
 
 [deps]
 
-source_file="res://images/C_Elm03.png"
-dest_files=[ "res://.import/C_Elm03.png-2b413a2f8965f2fc556d0e1e33e8b260.stex" ]
+source_file="res://Godot-Inventory-master/images/C_Elm03.png"
+dest_files=[ "res://.import/C_Elm03.png-9cb835bb921486d83613ddd8998dca50.stex" ]
 
 [params]
 

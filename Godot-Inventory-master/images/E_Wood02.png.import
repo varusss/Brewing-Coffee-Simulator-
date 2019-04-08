@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/E_Wood02.png-5d6e9b4a537dfae9077c3ba6fa21bca2.stex"
+path="res://.import/E_Wood02.png-366a9aa6d07c42fb21748240be62a24d.stex"
 
 [deps]
 
-source_file="res://images/E_Wood02.png"
-dest_files=[ "res://.import/E_Wood02.png-5d6e9b4a537dfae9077c3ba6fa21bca2.stex" ]
+source_file="res://Godot-Inventory-master/images/E_Wood02.png"
+dest_files=[ "res://.import/E_Wood02.png-366a9aa6d07c42fb21748240be62a24d.stex" ]
 
 [params]
 

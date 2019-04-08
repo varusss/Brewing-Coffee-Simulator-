@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/P_Red02.png-a0cd40a23aa7ed09aac9d93e1504d67a.stex"
+path="res://.import/P_Red02.png-5ba352e539f7c8079c51a4b0e8dee9dd.stex"
 
 [deps]
 
-source_file="res://images/P_Red02.png"
-dest_files=[ "res://.import/P_Red02.png-a0cd40a23aa7ed09aac9d93e1504d67a.stex" ]
+source_file="res://Godot-Inventory-master/images/P_Red02.png"
+dest_files=[ "res://.import/P_Red02.png-5ba352e539f7c8079c51a4b0e8dee9dd.stex" ]
 
 [params]
 

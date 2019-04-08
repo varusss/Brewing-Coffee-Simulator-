@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/A_Shoes03.png-fafb4e54f2b48e6fbdfda4fa5b316c39.stex"
+path="res://.import/A_Shoes03.png-e877ef0cfbbb6298bd9a917210e958a7.stex"
 
 [deps]
 
-source_file="res://images/A_Shoes03.png"
-dest_files=[ "res://.import/A_Shoes03.png-fafb4e54f2b48e6fbdfda4fa5b316c39.stex" ]
+source_file="res://Godot-Inventory-master/images/A_Shoes03.png"
+dest_files=[ "res://.import/A_Shoes03.png-e877ef0cfbbb6298bd9a917210e958a7.stex" ]
 
 [params]
 
