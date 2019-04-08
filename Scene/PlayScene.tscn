@@ -130,6 +130,7 @@ script = ExtResource( 8 )
 
 [node name="Cam" type="Node2D" parent="." index="8"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="Cam" index="0"]
