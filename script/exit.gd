@@ -15,10 +15,11 @@ func _ready():
 #	pass
 
 
-func _on_Start_pressed():
-	get_tree().change_scene("res://Scene/PlayScene.tscn")
+func _on_Exit_pressed():
+	get_tree().quit()
 	pass # replace with function body
 
 
-func _on_Exit_pressed():
+func _on_Restart_pressed():
+	get_tree().reload_current_scene()
 	pass # replace with function body

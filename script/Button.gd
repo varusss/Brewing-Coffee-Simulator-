@@ -45,10 +45,13 @@ func get_input(num):
 
 func _on_Button_pressed():
 	Forward(1)
-	print(cam.get_position())
+	if num > 4:
+		num =1
 	pass # replace with function body
 
 
 func _on_Button2_pressed():
 	Forward(-1)
+	if num < 1:
+		num = 4;
 	pass # replace with function body

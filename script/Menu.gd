@@ -3,6 +3,11 @@ extends Button
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
+var pos1 = Vector2(0,800);
+
+onready var cam = get_node("../../../Cam")
+onready var forward = get_node("../Button");
+onready var backward = get_node("../Button2");
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -15,10 +20,8 @@ func _ready():
 #	pass
 
 
-func _on_Start_pressed():
-	get_tree().change_scene("res://Scene/PlayScene.tscn")
-	pass # replace with function body
-
-
-func _on_Exit_pressed():
+func _on_Menu_pressed():
+	cam.set_position(pos1);
+	forward.hide()
+	backward.hide()
 	pass # replace with function body

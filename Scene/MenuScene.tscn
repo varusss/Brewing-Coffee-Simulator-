@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://image/mike-kenneally-286509-unsplash.jpg" type="Texture" id=1]
 [ext_resource path="res://Font/GreatVibes-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://script/start.gd" type="Script" id=3]
+[ext_resource path="res://script/Exit.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -72,6 +73,36 @@ align = 1
 script = ExtResource( 3 )
 _sections_unfolded = [ "custom_colors", "custom_constants", "custom_styles" ]
 
+[node name="Exit" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 700.0
+margin_top = 308.0
+margin_right = 766.0
+margin_bottom = 336.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Exit"
+flat = false
+align = 1
+script = ExtResource( 4 )
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_styles" ]
+
 [connection signal="pressed" from="Start" to="Start" method="_on_Start_pressed"]
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_Exit_pressed"]
 
 
