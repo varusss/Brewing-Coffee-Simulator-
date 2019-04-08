@@ -24,6 +24,7 @@ const itemImages = [
 	preload("res://Godot-Inventory-master/images/W_Sword001.png")
 ];
 
+#The dictionary that 
 const itemDictionary = {
 	0: {
 		"itemName": "Shoe",
