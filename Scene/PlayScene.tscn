@@ -11,7 +11,7 @@
 [ext_resource path="res://script/Button.gd" type="Script" id=9]
 [ext_resource path="res://script/Menu.gd" type="Script" id=10]
 
-[node name="PlayScene" type="Node2D" index="0"]
+[node name="PlayScene" type="Node2D"]
 
 _sections_unfolded = [ "Z Index" ]
 
@@ -129,6 +129,7 @@ script = ExtResource( 8 )
 
 [node name="Cam" type="Node2D" parent="." index="8"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="Cam" index="0"]

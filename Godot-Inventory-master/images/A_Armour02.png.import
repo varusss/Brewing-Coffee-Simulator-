@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/A_Armour02.png-36f5153095aa7e75e6e47807980fd7c2.stex"
+path="res://.import/A_Armour02.png-62653496baeb84d452a10deab6d29d4f.stex"
 
 [deps]
 
-source_file="res://images/A_Armour02.png"
-dest_files=[ "res://.import/A_Armour02.png-36f5153095aa7e75e6e47807980fd7c2.stex" ]
+source_file="res://Godot-Inventory-master/images/A_Armour02.png"
+dest_files=[ "res://.import/A_Armour02.png-62653496baeb84d452a10deab6d29d4f.stex" ]
 
 [params]
 

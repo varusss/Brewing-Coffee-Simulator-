@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/A_Shoes03.png-e877ef0cfbbb6298bd9a917210e958a7.stex"
+path="res://.import/Bear Stew-1.png.png-78546193245a7200cbf3225f3380b976.stex"
 
 [deps]
 
-source_file="res://Godot-Inventory-master/images/A_Shoes03.png"
-dest_files=[ "res://.import/A_Shoes03.png-e877ef0cfbbb6298bd9a917210e958a7.stex" ]
+source_file="res://Godot-Inventory-master/images/Bear Stew-1.png.png"
+dest_files=[ "res://.import/Bear Stew-1.png.png-78546193245a7200cbf3225f3380b976.stex" ]
 
 [params]
 
