@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://image/New Piskel-1.png.png" type="Texture" id=1]
 [ext_resource path="res://image/New Piskel-2.png.png" type="Texture" id=2]
@@ -11,6 +11,59 @@
 [ext_resource path="res://script/Button.gd" type="Script" id=9]
 [ext_resource path="res://script/Menu.gd" type="Script" id=10]
 [ext_resource path="res://Godot-Inventory-master/Inventory.gd" type="Script" id=11]
+[ext_resource path="res://script/LightSwitch.gd" type="Script" id=12]
+[ext_resource path="res://icon.png" type="Texture" id=13]
+[ext_resource path="res://script/PictureFrame.gd" type="Script" id=14]
+[ext_resource path="res://image/PictureFrame (1).png" type="Texture" id=15]
+[ext_resource path="res://script/LineEdit.gd" type="Script" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "PictureFrame"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "PictureFrameFlip"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="PlayScene" type="Node2D" index="0"]
 
@@ -130,6 +183,7 @@ script = ExtResource( 8 )
 
 [node name="Cam" type="Node2D" parent="." index="8"]
 
+editor/display_folded = true
 z_index = 5
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
@@ -273,6 +327,100 @@ columns = 5
 script = ExtResource( 11 )
 _sections_unfolded = [ "Mouse" ]
 
+[node name="LightSwitch" type="Area2D" parent="." index="9"]
+
+position = Vector2( 370.866, -5.55086 )
+scale = Vector2( 0.926068, 0.980003 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="LightSwitch" index="0"]
+
+position = Vector2( 2.5547, 0.652965 )
+scale = Vector2( 1.07983, 1.02041 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightSwitch" index="1"]
+
+scale = Vector2( 3.38651, 2.71119 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PictureFrame" type="Area2D" parent="." index="10"]
+
+position = Vector2( 26.1725, -13.5375 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PictureFrame" index="0"]
+
+texture = ExtResource( 15 )
+vframes = 2
+frame = 1
+_sections_unfolded = [ "Animation" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PictureFrame/Sprite" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/PictureFrame = SubResource( 2 )
+anims/PictureFrameFlip = SubResource( 4 )
+blend_times = [  ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PictureFrame" index="1"]
+
+position = Vector2( -12.7102, -6.52767 )
+scale = Vector2( 3.67632, 2.3821 )
+shape = SubResource( 3 )
+
+[node name="LineEdit" type="LineEdit" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 167.0
+margin_top = 46.0
+margin_right = 225.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0.414063, 0.331017, 0.242615, 1 )
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+script = ExtResource( 16 )
+_sections_unfolded = [ "Focus", "Hint", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
 [connection signal="pressed" from="Restart" to="Restart" method="_on_Restart_pressed"]
 
 [connection signal="pressed" from="Close" to="Close" method="_on_Close_pressed"]
@@ -284,5 +432,11 @@ _sections_unfolded = [ "Mouse" ]
 [connection signal="pressed" from="Cam/Camera2D/Button2" to="Cam/Camera2D/Button2" method="_on_Button2_pressed"]
 
 [connection signal="pressed" from="Cam/Camera2D/Menu" to="Cam/Camera2D/Menu" method="_on_Menu_pressed"]
+
+[connection signal="input_event" from="LightSwitch" to="LightSwitch" method="_on_LightSwitch_input_event"]
+
+[connection signal="input_event" from="PictureFrame" to="PictureFrame" method="_on_PictureFrame_input_event"]
+
+[connection signal="text_entered" from="LineEdit" to="LineEdit" method="_on_LineEdit_text_entered"]
 
 
