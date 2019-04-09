@@ -13,7 +13,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="MenuScene" type="Node2D" index="0"]
+[node name="MenuScene" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
