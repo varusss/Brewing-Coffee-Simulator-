@@ -16,6 +16,69 @@
 [node name="PlayScene" type="Node2D" index="0"]
 
 position = Vector2( 149.707, -227.142 )
+<<<<<<< HEAD
+=======
+_sections_unfolded = [ "Z Index" ]
+
+[node name="scene1" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 32.953, 20.3029 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Button" type="Button" parent="." index="1"]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "PictureFrame"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "PictureFrameFlip"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="PlayScene" type="Node2D" index="0"]
+
+>>>>>>> 58f0ad4d1edf88e9e0aa2634af98c2dfbb4ce102
 _sections_unfolded = [ "Z Index" ]
 
 [node name="scene1" type="Sprite" parent="." index="0"]
@@ -157,7 +220,17 @@ script = ExtResource( 9 )
 
 [node name="Cam" type="Node2D" parent="." index="9"]
 
+<<<<<<< HEAD
 _sections_unfolded = [ "Transform", "Z Index" ]
+=======
+
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+editor/display_folded = true
+z_index = 5
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+>>>>>>> 58f0ad4d1edf88e9e0aa2634af98c2dfbb4ce102
 
 [node name="Camera2D" type="Camera2D" parent="Cam" index="0"]
 
