@@ -1,14 +1,8 @@
-extends Button
+extends LineEdit
 
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-var pos1 = Vector2(0,800);
-
-onready var cam = get_node("../../../Cam")
-onready var forward = get_node("../Button");
-onready var backward = get_node("../Button2");
-onready var panel = get_node("../Panel")
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -21,9 +15,9 @@ func _ready():
 #	pass
 
 
-func _on_Menu_pressed():
-	cam.set_position(pos1);
-	forward.hide()
-	backward.hide()
-	panel.hide()
+func _on_LineEdit_text_entered(new_text):
+	
+	if new_text.to_lower() == "bean":
+		self.set("custom_colors/font_color", Color(60, 94, 22))
+		self.set_editable(false)
 	pass # replace with function body
