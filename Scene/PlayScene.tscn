@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://image/New Piskel-1.png.png" type="Texture" id=1]
@@ -17,7 +17,7 @@
 [node name="PlayScene" type="Node2D" index="0"]
 
 position = Vector2( 149.707, -227.142 )
-=======
+
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://image/New Piskel-1.png.png" type="Texture" id=1]
@@ -229,13 +229,13 @@ script = ExtResource( 9 )
 
 [node name="Cam" type="Node2D" parent="." index="9"]
 
-<<<<<<< HEAD
+
 _sections_unfolded = [ "Transform", "Z Index" ]
-=======
+
 editor/display_folded = true
 z_index = 5
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
->>>>>>> refs/remotes/origin/master
+
 
 [node name="Camera2D" type="Camera2D" parent="Cam" index="0"]
 
