@@ -28,7 +28,7 @@ func _process(delta):
 	var str_elapsed = "%02d : %02d" % [minutes, seconds]
 	label.set_text(str_elapsed);
 	
-	if (elapsed > 600):
-		get_tree().change_scene("res://DieScene.tscn")
+	if (elapsed == 300):
+		get_tree().change_scene("res://Scene/badEnd.tscn")
 		print("You Die") 
 	pass

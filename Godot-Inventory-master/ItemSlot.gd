@@ -5,7 +5,7 @@ var item = null;
 
 func _init(slotIndex):
 	self.slotIndex = slotIndex;
-	name = "ItemSlot_%d" % slotIndex
+	#name = "ItemSlot_%d" % slotIndex
 	texture = preload("res://Godot-Inventory-master/images/skil.png");
 	mouse_filter = Control.MOUSE_FILTER_PASS;
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND;

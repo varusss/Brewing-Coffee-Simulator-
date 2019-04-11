@@ -4,7 +4,7 @@ extends LineEdit
 # var a = 2
 # var b = "textvar"
 onready var recipe = get_node("../recipe")
-
+onready var pot = get_node("../Water Pot")
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -21,4 +21,5 @@ func _on_DrawCode_text_changed(new_text):
 		self.set("custom_colors/font_color", Color(60, 94, 22))
 		self.set_editable(false)
 		recipe.show();
+		pot.visible = true;
 	pass # replace with function body

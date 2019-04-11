@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://script/PlayScene1.gd" type="Script" id=1]
 [ext_resource path="res://[[Coffee Brewery/DoorScene.png" type="Texture" id=2]
@@ -10,25 +10,28 @@
 [ext_resource path="res://[[Coffee Brewery/Stove_Wall_1(1).png" type="Texture" id=8]
 [ext_resource path="res://[[Coffee Brewery/dark_kitchen.png" type="Texture" id=9]
 [ext_resource path="res://[[Coffee Brewery/Open.png" type="Texture" id=10]
-[ext_resource path="res://[[Coffee Brewery/shut_cabinent.png" type="Texture" id=11]
-[ext_resource path="res://[[Coffee Brewery/dark_book.png" type="Texture" id=12]
-[ext_resource path="res://image/CoffeeBrewing.png" type="Texture" id=13]
-[ext_resource path="res://script/exit.gd" type="Script" id=14]
-[ext_resource path="res://script/Close.gd" type="Script" id=15]
-[ext_resource path="res://script/Exit.gd" type="Script" id=16]
-[ext_resource path="res://Godot-Inventory-master/Inventory.gd" type="Script" id=17]
-[ext_resource path="res://script/Button.gd" type="Script" id=18]
-[ext_resource path="res://script/Menu.gd" type="Script" id=19]
-[ext_resource path="res://script/PictureFrame.gd" type="Script" id=20]
-[ext_resource path="res://script/IngredientCabinet.gd" type="Script" id=21]
-[ext_resource path="res://script/LineEdit.gd" type="Script" id=22]
-[ext_resource path="res://script/StoveCode.gd" type="Script" id=23]
-[ext_resource path="res://script/DrawCode.gd" type="Script" id=24]
-[ext_resource path="res://script/LightSwitch.gd" type="Script" id=25]
-[ext_resource path="res://script/Book.gd" type="Script" id=26]
-[ext_resource path="res://image/recipe.png" type="Texture" id=27]
-[ext_resource path="res://Godot-Inventory-master/images/Coffee Cup.png" type="Texture" id=28]
-[ext_resource path="res://Scene/Sprite.gd" type="Script" id=29]
+[ext_resource path="res://Godot-Inventory-master/images/bEASN.png" type="Texture" id=11]
+[ext_resource path="res://[[Coffee Brewery/shut_cabinent.png" type="Texture" id=12]
+[ext_resource path="res://[[Coffee Brewery/dark_book.png" type="Texture" id=13]
+[ext_resource path="res://image/CoffeeBrewing.png" type="Texture" id=14]
+[ext_resource path="res://script/exit.gd" type="Script" id=15]
+[ext_resource path="res://script/Close.gd" type="Script" id=16]
+[ext_resource path="res://script/Exit.gd" type="Script" id=17]
+[ext_resource path="res://Godot-Inventory-master/Inventory.gd" type="Script" id=18]
+[ext_resource path="res://script/Button.gd" type="Script" id=19]
+[ext_resource path="res://script/Menu.gd" type="Script" id=20]
+[ext_resource path="res://script/PictureFrame.gd" type="Script" id=21]
+[ext_resource path="res://script/IngredientCabinet.gd" type="Script" id=22]
+[ext_resource path="res://script/LineEdit.gd" type="Script" id=23]
+[ext_resource path="res://script/StoveCode.gd" type="Script" id=24]
+[ext_resource path="res://script/DrawCode.gd" type="Script" id=25]
+[ext_resource path="res://script/LightSwitch.gd" type="Script" id=26]
+[ext_resource path="res://script/Book.gd" type="Script" id=27]
+[ext_resource path="res://image/recipe.png" type="Texture" id=28]
+[ext_resource path="res://Godot-Inventory-master/images/Coffee Cup.png" type="Texture" id=29]
+[ext_resource path="res://Scene/Sprite.gd" type="Script" id=30]
+[ext_resource path="res://Godot-Inventory-master/images/Water Pot.png" type="Texture" id=31]
+[ext_resource path="res://Godot-Inventory-master/images/Coffee Pot.png" type="Texture" id=32]
 
 [sub_resource type="Animation" id=1]
 
@@ -381,7 +384,6 @@ _sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="scene2" type="Sprite" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 1500, 0 )
 scale = Vector2( 1.01726, 0.608756 )
 texture = ExtResource( 4 )
@@ -503,26 +505,50 @@ scale = Vector2( 1, 0.614222 )
 texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CabinetZoom" type="Sprite" parent="." index="9"]
+[node name="Coffee Bean Can" type="TextureButton" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1365.0
+margin_top = 742.0
+margin_right = 1621.0
+margin_bottom = 998.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 11 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="CabinetZoom" type="Sprite" parent="." index="10"]
 
 position = Vector2( 1500, 796.874 )
 scale = Vector2( 1, 0.603336 )
-texture = ExtResource( 11 )
-_sections_unfolded = [ "Transform" ]
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Region", "Transform" ]
 
-[node name="bookk" type="Sprite" parent="." index="10"]
+[node name="bookk" type="Sprite" parent="." index="11"]
 
 position = Vector2( 3000, 800 )
 scale = Vector2( 1, 0.603336 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="menuScene" type="Sprite" parent="." index="11"]
+[node name="menuScene" type="Sprite" parent="." index="12"]
 
 editor/display_folded = true
 position = Vector2( 28.6109, 865.569 )
 scale = Vector2( 1.07525, 0.800707 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 vframes = 3
 hframes = 2
 frame = 1
@@ -538,7 +564,7 @@ playback_speed = 1.0
 anims/coffee = SubResource( 16 )
 blend_times = [  ]
 
-[node name="Restart" type="Button" parent="." index="12"]
+[node name="Restart" type="Button" parent="." index="13"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -562,9 +588,9 @@ group = null
 text = "Restart"
 flat = false
 align = 1
-script = ExtResource( 14 )
+script = ExtResource( 15 )
 
-[node name="Close" type="Button" parent="." index="13"]
+[node name="Close" type="Button" parent="." index="14"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -588,9 +614,9 @@ group = null
 text = "Close Menu"
 flat = false
 align = 1
-script = ExtResource( 15 )
+script = ExtResource( 16 )
 
-[node name="Exit" type="Button" parent="." index="14"]
+[node name="Exit" type="Button" parent="." index="15"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -614,9 +640,9 @@ group = null
 text = "Exit"
 flat = false
 align = 1
-script = ExtResource( 16 )
+script = ExtResource( 17 )
 
-[node name="Cam" type="Node2D" parent="." index="15"]
+[node name="Cam" type="Node2D" parent="." index="16"]
 
 _sections_unfolded = [ "Transform", "Z Index" ]
 
@@ -652,10 +678,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -163.0
-margin_top = 241.0
-margin_right = 109.0
-margin_bottom = 287.0
+margin_left = -57.0
+margin_top = 249.0
+margin_right = 215.0
+margin_bottom = 295.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -663,7 +689,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 4
-script = ExtResource( 17 )
+script = ExtResource( 18 )
 _sections_unfolded = [ "Mouse" ]
 
 [node name="Button" type="Button" parent="Cam/Camera2D" index="1"]
@@ -690,7 +716,7 @@ group = null
 text = ">"
 flat = false
 align = 1
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 
 [node name="Button2" type="Button" parent="Cam/Camera2D" index="2"]
 
@@ -716,7 +742,7 @@ group = null
 text = "<"
 flat = false
 align = 1
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 
 [node name="Menu" type="Button" parent="Cam/Camera2D" index="3"]
 
@@ -742,11 +768,10 @@ group = null
 text = "Menu"
 flat = false
 align = 1
-script = ExtResource( 19 )
+script = ExtResource( 20 )
 
 [node name="Button3" type="Button" parent="Cam/Camera2D" index="4"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -769,7 +794,7 @@ group = null
 text = "^"
 flat = false
 align = 1
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 
 [node name="Label" type="Label" parent="Cam/Camera2D" index="5"]
 
@@ -791,99 +816,10 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="sc1FrameSwitch" type="Area2D" parent="." index="16"]
+[node name="sc1FrameSwitch" type="Area2D" parent="." index="17"]
 
 editor/display_folded = true
 position = Vector2( -336.743, -74.394 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sc1FrameSwitch" index="0"]
-
-position = Vector2( -3.58064, 13.9961 )
-scale = Vector2( 13.269, 9.8219 )
-shape = SubResource( 17 )
-
-[node name="sc2FrameSwitch" type="Area2D" parent="." index="17"]
-
-editor/display_folded = true
-position = Vector2( 1405.5, -166.775 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sc2FrameSwitch" index="0"]
-
-position = Vector2( -5.19446, 19.5977 )
-scale = Vector2( 11.8301, 8.99086 )
-shape = SubResource( 17 )
-
-[node name="sc3FrameSwitch1" type="Area2D" parent="." index="18"]
-
-editor/display_folded = true
-position = Vector2( 2624.31, -199.912 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch1" index="0"]
-
-position = Vector2( -5.19446, 19.5977 )
-scale = Vector2( 11.8301, 8.99086 )
-shape = SubResource( 17 )
-
-[node name="sc3FrameSwitch2" type="Area2D" parent="." index="19"]
-
-editor/display_folded = true
-position = Vector2( 3078.58, -204.823 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch2" index="0"]
-
-position = Vector2( -5.19446, 19.5977 )
-scale = Vector2( 11.8301, 8.99086 )
-shape = SubResource( 17 )
-
-[node name="IngredientCabinet" type="Area2D" parent="." index="20"]
-
-editor/display_folded = true
-position = Vector2( 3347.2, -110.227 )
-scale = Vector2( 1, 1.63231 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -896,13 +832,102 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc1FrameSwitch" index="0"]
+
+position = Vector2( -3.58064, 13.9961 )
+scale = Vector2( 13.269, 9.8219 )
+shape = SubResource( 17 )
+
+[node name="sc2FrameSwitch" type="Area2D" parent="." index="18"]
+
+editor/display_folded = true
+position = Vector2( 1405.5, -166.775 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc2FrameSwitch" index="0"]
+
+position = Vector2( -5.19446, 19.5977 )
+scale = Vector2( 11.8301, 8.99086 )
+shape = SubResource( 17 )
+
+[node name="sc3FrameSwitch1" type="Area2D" parent="." index="19"]
+
+editor/display_folded = true
+position = Vector2( 2624.31, -199.912 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch1" index="0"]
+
+position = Vector2( -5.19446, 19.5977 )
+scale = Vector2( 11.8301, 8.99086 )
+shape = SubResource( 17 )
+
+[node name="sc3FrameSwitch2" type="Area2D" parent="." index="20"]
+
+editor/display_folded = true
+position = Vector2( 3078.58, -204.823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch2" index="0"]
+
+position = Vector2( -5.19446, 19.5977 )
+scale = Vector2( 11.8301, 8.99086 )
+shape = SubResource( 17 )
+
+[node name="IngredientCabinet" type="Area2D" parent="." index="21"]
+
+editor/display_folded = true
+position = Vector2( 3347.2, -110.227 )
+scale = Vector2( 1, 1.63231 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientCabinet" index="0"]
 
 position = Vector2( -5.19446, 19.5977 )
 scale = Vector2( 11.8301, 8.99086 )
 shape = SubResource( 17 )
 
-[node name="CabinetCode" type="LineEdit" parent="." index="21"]
+[node name="CabinetCode" type="LineEdit" parent="." index="22"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -925,9 +950,9 @@ placeholder_alpha = 0.6
 caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
-script = ExtResource( 22 )
+script = ExtResource( 23 )
 
-[node name="StoveCode" type="LineEdit" parent="." index="22"]
+[node name="StoveCode" type="LineEdit" parent="." index="23"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -950,9 +975,9 @@ placeholder_alpha = 0.6
 caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
-script = ExtResource( 23 )
+script = ExtResource( 24 )
 
-[node name="DrawCode" type="LineEdit" parent="." index="23"]
+[node name="DrawCode" type="LineEdit" parent="." index="24"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -975,32 +1000,12 @@ placeholder_alpha = 0.6
 caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
-script = ExtResource( 24 )
+script = ExtResource( 25 )
 
-[node name="LightSwitch" type="Area2D" parent="." index="24"]
+[node name="LightSwitch" type="Area2D" parent="." index="25"]
 
 position = Vector2( -154.534, 74.3525 )
 scale = Vector2( 2.72624, 2.78844 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 25 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LightSwitch" index="0"]
-
-shape = SubResource( 18 )
-
-[node name="Book" type="Area2D" parent="." index="25"]
-
-position = Vector2( 2843.39, -3.28252 )
-scale = Vector2( 10.7427, 1.44784 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -1013,17 +1018,38 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightSwitch" index="0"]
+
+shape = SubResource( 18 )
+
+[node name="Book" type="Area2D" parent="." index="26"]
+
+position = Vector2( 2843.39, -3.28252 )
+scale = Vector2( 10.7427, 1.44784 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Book" index="0"]
 
 shape = SubResource( 19 )
 
-[node name="recipe" type="Sprite" parent="." index="26"]
+[node name="recipe" type="Sprite" parent="." index="27"]
 
+visible = false
 position = Vector2( 4741.69, 38.2957 )
 scale = Vector2( 0.142982, 0.142982 )
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
 
-[node name="Coffee Cup" type="TextureButton" parent="." index="27"]
+[node name="Coffee Cup" type="TextureButton" parent="." index="28"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1044,9 +1070,60 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 28 )
-script = ExtResource( 29 )
+texture_normal = ExtResource( 29 )
+script = ExtResource( 30 )
 _sections_unfolded = [ "Textures", "Visibility" ]
+
+[node name="Water Pot" type="TextureButton" parent="." index="29"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4132.0
+margin_top = -26.0
+margin_right = 4232.0
+margin_bottom = 74.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 31 )
+_sections_unfolded = [ "Textures", "Visibility" ]
+
+[node name="Coffee Pot" type="TextureButton" parent="." index="30"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1065.0
+margin_top = 3.0
+margin_right = 1193.0
+margin_bottom = 131.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 32 )
+_sections_unfolded = [ "Textures" ]
+
+[connection signal="pressed" from="Coffee Bean Can" to="Cam/Camera2D/GridContainer" method="_on_Coffee_Bean_Can_pressed"]
 
 [connection signal="pressed" from="Restart" to="Restart" method="_on_Restart_pressed"]
 
@@ -1082,8 +1159,14 @@ _sections_unfolded = [ "Textures", "Visibility" ]
 
 [connection signal="input_event" from="Book" to="Book" method="_on_Book_input_event"]
 
-[connection signal="pressed" from="Coffee Cup" to="Cam/Camera2D/GridContainer" method="_on_Button_pressed"]
-
 [connection signal="pressed" from="Coffee Cup" to="Coffee Cup" method="_on_Coffee_Cup_pressed"]
+
+[connection signal="pressed" from="Coffee Cup" to="Cam/Camera2D/GridContainer" method="_on_Coffee_Cup_pressed"]
+
+[connection signal="pressed" from="Water Pot" to="DrawCode" method="_on_Water_Pot_pressed"]
+
+[connection signal="pressed" from="Water Pot" to="Cam/Camera2D/GridContainer" method="_on_Water_Pot_pressed"]
+
+[connection signal="pressed" from="Coffee Pot" to="Cam/Camera2D/GridContainer" method="_on_Coffee_Pot_pressed"]
 
 

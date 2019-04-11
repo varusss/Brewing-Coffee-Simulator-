@@ -7,7 +7,7 @@ var pos = Vector2(0,0);
 onready var cam = get_node("../Cam")
 onready var forward = get_node("../Cam/Camera2D/Button");
 onready var backward = get_node("../Cam/Camera2D/Button2");
-onready var panel = get_node("../Cam/Camera2D/Panel")
+onready var panel = get_node("../Cam/Camera2D/GridContainer");
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
