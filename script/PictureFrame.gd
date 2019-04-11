@@ -4,8 +4,8 @@ extends Area2D
 # var a = 2
 # var b = "textvar"
 var check = true;
-onready var pictureFrame = get_node("../PictureFrame/Sprite/AnimationPlayer")
-
+onready var pictureFrame = get_node("../scene1/AnimationPlayer")
+onready var pictureFrame2 = get_node("../scene2/AnimationPlayer")
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -17,12 +17,23 @@ func _ready():
 #	pass
 
 
-func _on_PictureFrame_input_event(viewport, event, shape_idx):
+func _on_sc1FrameSwitch_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		if check == true:
-			pictureFrame.play("PictureFrame");
+			pictureFrame.play("FlipPictureFrame");
 			check = false
 		elif check == false:
-			pictureFrame.play("PictureFrameFlip");
+			pictureFrame.play("returnNormal");
+			check = true;
+	pass # replace with function body
+
+
+func _on_sc2FrameSwitch_input_event(viewport, event, shape_idx):
+	if (event is InputEventMouseButton && event.pressed):
+		if check == true:
+			pictureFrame2.play("flip");
+			check = false
+		elif check == false:
+			pictureFrame2.play("return");
 			check = true;
 	pass # replace with function body
