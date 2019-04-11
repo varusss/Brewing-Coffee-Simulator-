@@ -1,9 +1,10 @@
-extends LineEdit
+extends Area2D
 
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-onready var recipe = get_node("../recipe")
+var pos = Vector2(3000,800)
+onready var camPos = get_node("../Cam")
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -15,10 +16,7 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-
-func _on_DrawCode_text_changed(new_text):
-	if new_text.to_lower() == "bean":
-		self.set("custom_colors/font_color", Color(60, 94, 22))
-		self.set_editable(false)
-		recipe.show();
+func _on_Book_input_event(viewport, event, shape_idx):
+	if (event is InputEventMouseButton && event.pressed):
+		camPos.set_position(pos)
 	pass # replace with function body

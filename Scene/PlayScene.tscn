@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://script/PlayScene1.gd" type="Script" id=1]
 [ext_resource path="res://[[Coffee Brewery/DoorScene.png" type="Texture" id=2]
@@ -12,19 +12,22 @@
 [ext_resource path="res://[[Coffee Brewery/dark_kitchen.png" type="Texture" id=10]
 [ext_resource path="res://[[Coffee Brewery/Open.png" type="Texture" id=11]
 [ext_resource path="res://[[Coffee Brewery/shut_cabinent.png" type="Texture" id=12]
-[ext_resource path="res://image/CoffeeBrewing.png" type="Texture" id=13]
-[ext_resource path="res://script/exit.gd" type="Script" id=14]
-[ext_resource path="res://script/Close.gd" type="Script" id=15]
-[ext_resource path="res://script/Exit.gd" type="Script" id=16]
-[ext_resource path="res://Godot-Inventory-master/Inventory.gd" type="Script" id=17]
-[ext_resource path="res://script/Button.gd" type="Script" id=18]
-[ext_resource path="res://script/Menu.gd" type="Script" id=19]
-[ext_resource path="res://script/PictureFrame.gd" type="Script" id=20]
-[ext_resource path="res://script/IngredientCabinet.gd" type="Script" id=21]
-[ext_resource path="res://script/LineEdit.gd" type="Script" id=22]
-[ext_resource path="res://script/StoveCode.gd" type="Script" id=23]
-[ext_resource path="res://script/DrawCode.gd" type="Script" id=24]
-[ext_resource path="res://script/LightSwitch.gd" type="Script" id=25]
+[ext_resource path="res://[[Coffee Brewery/dark_book.png" type="Texture" id=13]
+[ext_resource path="res://image/CoffeeBrewing.png" type="Texture" id=14]
+[ext_resource path="res://script/exit.gd" type="Script" id=15]
+[ext_resource path="res://script/Close.gd" type="Script" id=16]
+[ext_resource path="res://script/Exit.gd" type="Script" id=17]
+[ext_resource path="res://Godot-Inventory-master/Inventory.gd" type="Script" id=18]
+[ext_resource path="res://script/Button.gd" type="Script" id=19]
+[ext_resource path="res://script/Menu.gd" type="Script" id=20]
+[ext_resource path="res://script/PictureFrame.gd" type="Script" id=21]
+[ext_resource path="res://script/IngredientCabinet.gd" type="Script" id=22]
+[ext_resource path="res://script/LineEdit.gd" type="Script" id=23]
+[ext_resource path="res://script/StoveCode.gd" type="Script" id=24]
+[ext_resource path="res://script/DrawCode.gd" type="Script" id=25]
+[ext_resource path="res://script/LightSwitch.gd" type="Script" id=26]
+[ext_resource path="res://script/Book.gd" type="Script" id=27]
+[ext_resource path="res://image/recipe.png" type="Texture" id=28]
 
 [sub_resource type="Animation" id=1]
 
@@ -340,6 +343,11 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
+[sub_resource type="RectangleShape2D" id=19]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
 [node name="PlayScene" type="Node2D" index="0"]
 
 position = Vector2( 149.707, -227.142 )
@@ -530,12 +538,19 @@ scale = Vector2( 1, 0.603336 )
 texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="menuScene" type="Sprite" parent="." index="11"]
+[node name="bookk" type="Sprite" parent="." index="11"]
+
+position = Vector2( 3000, 800 )
+scale = Vector2( 1, 0.603336 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="menuScene" type="Sprite" parent="." index="12"]
 
 editor/display_folded = true
 position = Vector2( 28.6109, 865.569 )
 scale = Vector2( 1.07525, 0.800707 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 vframes = 3
 hframes = 2
 frame = 1
@@ -551,7 +566,7 @@ playback_speed = 1.0
 anims/coffee = SubResource( 10 )
 blend_times = [  ]
 
-[node name="Restart" type="Button" parent="." index="12"]
+[node name="Restart" type="Button" parent="." index="13"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -575,9 +590,9 @@ group = null
 text = "Restart"
 flat = false
 align = 1
-script = ExtResource( 14 )
+script = ExtResource( 15 )
 
-[node name="Close" type="Button" parent="." index="13"]
+[node name="Close" type="Button" parent="." index="14"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -601,9 +616,9 @@ group = null
 text = "Close Menu"
 flat = false
 align = 1
-script = ExtResource( 15 )
+script = ExtResource( 16 )
 
-[node name="Exit" type="Button" parent="." index="14"]
+[node name="Exit" type="Button" parent="." index="15"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -627,9 +642,9 @@ group = null
 text = "Exit"
 flat = false
 align = 1
-script = ExtResource( 16 )
+script = ExtResource( 17 )
 
-[node name="Cam" type="Node2D" parent="." index="15"]
+[node name="Cam" type="Node2D" parent="." index="16"]
 
 editor/display_folded = true
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -697,7 +712,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 7
-script = ExtResource( 17 )
+script = ExtResource( 18 )
 _sections_unfolded = [ "Mouse" ]
 
 [node name="Button" type="Button" parent="Cam/Camera2D" index="1"]
@@ -724,7 +739,7 @@ group = null
 text = ">"
 flat = false
 align = 1
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 
 [node name="Button2" type="Button" parent="Cam/Camera2D" index="2"]
 
@@ -750,7 +765,7 @@ group = null
 text = "<"
 flat = false
 align = 1
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 
 [node name="Menu" type="Button" parent="Cam/Camera2D" index="3"]
 
@@ -776,7 +791,7 @@ group = null
 text = "Menu"
 flat = false
 align = 1
-script = ExtResource( 19 )
+script = ExtResource( 20 )
 
 [node name="Button3" type="Button" parent="Cam/Camera2D" index="4"]
 
@@ -803,7 +818,7 @@ group = null
 text = "^"
 flat = false
 align = 1
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 
 [node name="Label" type="Label" parent="Cam/Camera2D" index="5"]
 
@@ -825,99 +840,10 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="sc1FrameSwitch" type="Area2D" parent="." index="16"]
+[node name="sc1FrameSwitch" type="Area2D" parent="." index="17"]
 
 editor/display_folded = true
 position = Vector2( -336.743, -74.394 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sc1FrameSwitch" index="0"]
-
-position = Vector2( -3.58064, 13.9961 )
-scale = Vector2( 13.269, 9.8219 )
-shape = SubResource( 3 )
-
-[node name="sc2FrameSwitch" type="Area2D" parent="." index="17"]
-
-editor/display_folded = true
-position = Vector2( 1405.5, -166.775 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sc2FrameSwitch" index="0"]
-
-position = Vector2( -5.19446, 19.5977 )
-scale = Vector2( 11.8301, 8.99086 )
-shape = SubResource( 3 )
-
-[node name="sc3FrameSwitch1" type="Area2D" parent="." index="18"]
-
-editor/display_folded = true
-position = Vector2( 2624.31, -199.912 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch1" index="0"]
-
-position = Vector2( -5.19446, 19.5977 )
-scale = Vector2( 11.8301, 8.99086 )
-shape = SubResource( 3 )
-
-[node name="sc3FrameSwitch2" type="Area2D" parent="." index="19"]
-
-editor/display_folded = true
-position = Vector2( 3078.58, -204.823 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch2" index="0"]
-
-position = Vector2( -5.19446, 19.5977 )
-scale = Vector2( 11.8301, 8.99086 )
-shape = SubResource( 3 )
-
-[node name="IngredientCabinet" type="Area2D" parent="." index="20"]
-
-editor/display_folded = true
-position = Vector2( 3347.2, -110.227 )
-scale = Vector2( 1, 1.63231 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -930,13 +856,102 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc1FrameSwitch" index="0"]
+
+position = Vector2( -3.58064, 13.9961 )
+scale = Vector2( 13.269, 9.8219 )
+shape = SubResource( 3 )
+
+[node name="sc2FrameSwitch" type="Area2D" parent="." index="18"]
+
+editor/display_folded = true
+position = Vector2( 1405.5, -166.775 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc2FrameSwitch" index="0"]
+
+position = Vector2( -5.19446, 19.5977 )
+scale = Vector2( 11.8301, 8.99086 )
+shape = SubResource( 3 )
+
+[node name="sc3FrameSwitch1" type="Area2D" parent="." index="19"]
+
+editor/display_folded = true
+position = Vector2( 2624.31, -199.912 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch1" index="0"]
+
+position = Vector2( -5.19446, 19.5977 )
+scale = Vector2( 11.8301, 8.99086 )
+shape = SubResource( 3 )
+
+[node name="sc3FrameSwitch2" type="Area2D" parent="." index="20"]
+
+editor/display_folded = true
+position = Vector2( 3078.58, -204.823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch2" index="0"]
+
+position = Vector2( -5.19446, 19.5977 )
+scale = Vector2( 11.8301, 8.99086 )
+shape = SubResource( 3 )
+
+[node name="IngredientCabinet" type="Area2D" parent="." index="21"]
+
+editor/display_folded = true
+position = Vector2( 3347.2, -110.227 )
+scale = Vector2( 1, 1.63231 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientCabinet" index="0"]
 
 position = Vector2( -5.19446, 19.5977 )
 scale = Vector2( 11.8301, 8.99086 )
 shape = SubResource( 3 )
 
-[node name="CabinetCode" type="LineEdit" parent="." index="21"]
+[node name="CabinetCode" type="LineEdit" parent="." index="22"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -959,9 +974,9 @@ placeholder_alpha = 0.6
 caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
-script = ExtResource( 22 )
+script = ExtResource( 23 )
 
-[node name="StoveCode" type="LineEdit" parent="." index="22"]
+[node name="StoveCode" type="LineEdit" parent="." index="23"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -984,9 +999,9 @@ placeholder_alpha = 0.6
 caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
-script = ExtResource( 23 )
+script = ExtResource( 24 )
 
-[node name="DrawCode" type="LineEdit" parent="." index="23"]
+[node name="DrawCode" type="LineEdit" parent="." index="24"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1009,9 +1024,9 @@ placeholder_alpha = 0.6
 caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
-script = ExtResource( 24 )
+script = ExtResource( 25 )
 
-[node name="LightSwitch" type="Area2D" parent="." index="24"]
+[node name="LightSwitch" type="Area2D" parent="." index="25"]
 
 position = Vector2( -154.534, 74.3525 )
 scale = Vector2( 2.72624, 2.78844 )
@@ -1022,7 +1037,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 25 )
+script = ExtResource( 26 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1030,6 +1045,32 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LightSwitch" index="0"]
 
 shape = SubResource( 11 )
+
+[node name="Book" type="Area2D" parent="." index="26"]
+
+position = Vector2( 2843.39, -3.28252 )
+scale = Vector2( 10.7427, 1.44784 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Book" index="0"]
+
+shape = SubResource( 19 )
+
+[node name="recipe" type="Sprite" parent="." index="27"]
+
+position = Vector2( 4738.97, 36.9353 )
+scale = Vector2( 0.142982, 0.142982 )
+texture = ExtResource( 28 )
 
 [connection signal="pressed" from="Button" to="Cam/Camera2D/Panel/GridContainer" method="_on_Button_pressed"]
 
@@ -1064,5 +1105,7 @@ shape = SubResource( 11 )
 [connection signal="text_changed" from="DrawCode" to="DrawCode" method="_on_DrawCode_text_changed"]
 
 [connection signal="input_event" from="LightSwitch" to="LightSwitch" method="_on_LightSwitch_input_event"]
+
+[connection signal="input_event" from="Book" to="Book" method="_on_Book_input_event"]
 
 
