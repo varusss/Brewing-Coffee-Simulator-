@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 var itemadd = preload("res://Godot-Inventory-master/Inventory.gd");
 # class member variables go here, for example:
@@ -14,3 +14,7 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+func _on_Coffee_Cup_pressed():
+	self.visible = false;

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bear Stew-1.png.png-78546193245a7200cbf3225f3380b976.stex"
+path="res://.import/Coffee Pot.png-3f73571fde9fc0c5cef68686948e4604.stex"
 
 [deps]
 
-source_file="res://Godot-Inventory-master/images/Bear Stew-1.png.png"
-dest_files=[ "res://.import/Bear Stew-1.png.png-78546193245a7200cbf3225f3380b976.stex" ]
+source_file="res://Godot-Inventory-master/images/Coffee Pot.png"
+dest_files=[ "res://.import/Coffee Pot.png-3f73571fde9fc0c5cef68686948e4604.stex" ]
 
 [params]
 

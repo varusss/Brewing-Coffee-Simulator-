@@ -5,7 +5,7 @@
 [ext_resource path="res://script/start.gd" type="Script" id=3]
 [ext_resource path="res://script/Exit.gd" type="Script" id=4]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 
 resource_name = "coffeeBrewing"
 length = 0.8
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4 ]
 }
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 
 size = 60
 use_mipmaps = false
@@ -52,7 +52,7 @@ autoplay = "coffeeBrewing"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/coffeeBrewing = SubResource( 2 )
+anims/coffeeBrewing = SubResource( 1 )
 blend_times = [  ]
 
 [node name="Label" type="Label" parent="." index="1"]
@@ -71,7 +71,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Brewing Coffee Simulator"
 percent_visible = 1.0
 lines_skipped = 0
