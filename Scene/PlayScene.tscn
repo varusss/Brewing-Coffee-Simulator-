@@ -346,7 +346,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="PlayScene" type="Node2D" index="0"]
+[node name="PlayScene" type="Node2D"]
 
 position = Vector2( 149.707, -227.142 )
 script = ExtResource( 1 )
@@ -1082,8 +1082,8 @@ _sections_unfolded = [ "Textures", "Visibility" ]
 
 [connection signal="input_event" from="Book" to="Book" method="_on_Book_input_event"]
 
-[connection signal="pressed" from="Coffee Cup" to="Cam/Camera2D/GridContainer" method="_on_Button_pressed"]
-
 [connection signal="pressed" from="Coffee Cup" to="Coffee Cup" method="_on_Coffee_Cup_pressed"]
+
+[connection signal="pressed" from="Coffee Cup" to="Cam/Camera2D/GridContainer" method="_on_Button_pressed"]
 
 

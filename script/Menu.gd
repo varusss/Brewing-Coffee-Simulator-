@@ -8,7 +8,7 @@ var pos1 = Vector2(0,800);
 onready var cam = get_node("../../../Cam")
 onready var forward = get_node("../Button");
 onready var backward = get_node("../Button2");
-onready var panel = get_node("../Panel")
+onready var panel = get_node("../GridContainer")
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
