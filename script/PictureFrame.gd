@@ -6,6 +6,7 @@ extends Area2D
 var check = true;
 onready var pictureFrame = get_node("../scene1/AnimationPlayer")
 onready var pictureFrame2 = get_node("../scene2/AnimationPlayer")
+onready var pictureFrame3 = get_node("../scene3/AnimationPlayer")
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -35,5 +36,27 @@ func _on_sc2FrameSwitch_input_event(viewport, event, shape_idx):
 			check = false
 		elif check == false:
 			pictureFrame2.play("return");
+			check = true;
+	pass # replace with function body
+
+
+func _on_sc3FrameSwitch1_input_event(viewport, event, shape_idx):
+	if (event is InputEventMouseButton && event.pressed):
+		if check == true:
+			pictureFrame3.play("flip_N");
+			check = false
+		elif check == false:
+			pictureFrame3.play("return_N");
+			check = true;
+	pass # replace with function body
+
+
+func _on_sc3FrameSwitch2_input_event(viewport, event, shape_idx):
+	if (event is InputEventMouseButton && event.pressed):
+		if check == true:
+			pictureFrame3.play("flip_A");
+			check = false
+		elif check == false:
+			pictureFrame3.play("return_A");
 			check = true;
 	pass # replace with function body

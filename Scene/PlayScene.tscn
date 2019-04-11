@@ -1,18 +1,25 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://[[Coffee Brewery/DoorScene.png" type="Texture" id=1]
-[ext_resource path="res://Scene/Sprite.gd" type="Script" id=2]
-[ext_resource path="res://[[Coffee Brewery/KitchenScene.png" type="Texture" id=3]
-[ext_resource path="res://image/New Piskel-3.png.png" type="Texture" id=4]
-[ext_resource path="res://image/New Piskel-4.png.png" type="Texture" id=5]
-[ext_resource path="res://image/Black-fillin(expandwatever).png" type="Texture" id=6]
-[ext_resource path="res://script/exit.gd" type="Script" id=7]
-[ext_resource path="res://script/Close.gd" type="Script" id=8]
-[ext_resource path="res://script/Exit.gd" type="Script" id=9]
-[ext_resource path="res://Godot-Inventory-master/Inventory.gd" type="Script" id=10]
-[ext_resource path="res://script/Button.gd" type="Script" id=11]
-[ext_resource path="res://script/Menu.gd" type="Script" id=12]
-[ext_resource path="res://script/PictureFrame.gd" type="Script" id=13]
+[ext_resource path="res://image/FDoorD.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Sprite.gd" type="Script" id=3]
+[ext_resource path="res://[[Coffee Brewery/KitchenScene.png" type="Texture" id=4]
+[ext_resource path="res://image/FBarD.png" type="Texture" id=5]
+[ext_resource path="res://[[Coffee Brewery/Travel_Book_Wall.png" type="Texture" id=6]
+[ext_resource path="res://image/New Piskel-4.png.png" type="Texture" id=7]
+[ext_resource path="res://[[Coffee Brewery/shut_cabinent.png" type="Texture" id=8]
+[ext_resource path="res://[[Coffee Brewery/Open.png" type="Texture" id=9]
+[ext_resource path="res://image/CoffeeBrewing.png" type="Texture" id=10]
+[ext_resource path="res://script/exit.gd" type="Script" id=11]
+[ext_resource path="res://script/Close.gd" type="Script" id=12]
+[ext_resource path="res://script/Exit.gd" type="Script" id=13]
+[ext_resource path="res://Godot-Inventory-master/Inventory.gd" type="Script" id=14]
+[ext_resource path="res://script/Button.gd" type="Script" id=15]
+[ext_resource path="res://script/Menu.gd" type="Script" id=16]
+[ext_resource path="res://script/PictureFrame.gd" type="Script" id=17]
+[ext_resource path="res://script/IngredientCabinet.gd" type="Script" id=18]
+[ext_resource path="res://script/LineEdit.gd" type="Script" id=19]
+[ext_resource path="res://script/LightSwitch.gd" type="Script" id=20]
 
 [sub_resource type="Animation" id=1]
 
@@ -90,7 +97,221 @@ tracks/0/keys = {
 "values": [ 1, 0 ]
 }
 
+[sub_resource type="Animation" id=12]
+
+resource_name = "flip"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=13]
+
+resource_name = "return"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=8]
+
+resource_name = "flip_A"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 2 ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "flip_N"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=9]
+
+resource_name = "return_A"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 0 ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource_name = "return_N"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=14]
+
+resource_name = "flip_A"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 2 ]
+}
+
+[sub_resource type="Animation" id=15]
+
+resource_name = "flip_N"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=16]
+
+resource_name = "return_A"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 0 ]
+}
+
+[sub_resource type="Animation" id=17]
+
+resource_name = "return_N"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=10]
+
+resource_name = "coffee"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
 [sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -102,6 +323,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="scene1" type="Sprite" parent="." index="0"]
 
+editor/display_folded = true
 scale = Vector2( 0.809385, 0.524176 )
 texture = ExtResource( 1 )
 vframes = 2
@@ -118,7 +340,15 @@ anims/FlipPictureFrame = SubResource( 1 )
 anims/returnNormal = SubResource( 2 )
 blend_times = [  ]
 
-[node name="Button" type="Button" parent="." index="1"]
+[node name="scene1Darken" type="Sprite" parent="." index="1"]
+
+visible = false
+scale = Vector2( 0.809385, 0.524176 )
+texture = ExtResource( 2 )
+vframes = 2
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="Button" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -141,15 +371,15 @@ shortcut = null
 group = null
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
-[node name="scene2" type="Sprite" parent="." index="2"]
+[node name="scene2" type="Sprite" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 1500, 0 )
 scale = Vector2( 1.01726, 0.608756 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 vframes = 2
-frame = 1
 _sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scene2" index="0"]
@@ -163,37 +393,134 @@ anims/flip = SubResource( 4 )
 anims/return = SubResource( 5 )
 blend_times = [  ]
 
-[node name="scene3" type="Sprite" parent="." index="3"]
+[node name="scene2Darken" type="Sprite" parent="." index="4"]
 
-position = Vector2( 3000, 0 )
-scale = Vector2( 32.953, 20.3029 )
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+editor/display_folded = true
+visible = false
+position = Vector2( 1500, 0 )
+scale = Vector2( 1.01726, 0.608756 )
+texture = ExtResource( 5 )
+vframes = 2
+_sections_unfolded = [ "Animation", "Transform" ]
 
-[node name="scene4" type="Sprite" parent="." index="4"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scene2Darken" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/flip = SubResource( 12 )
+anims/return = SubResource( 13 )
+blend_times = [  ]
+
+[node name="scene3" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 3000, -8.46282 )
+scale = Vector2( 1, 0.602432 )
+texture = ExtResource( 6 )
+vframes = 2
+hframes = 2
+_sections_unfolded = [ "Animation", "Transform", "Z Index" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scene3" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/flip_A = SubResource( 8 )
+anims/flip_N = SubResource( 6 )
+anims/return_A = SubResource( 9 )
+anims/return_N = SubResource( 7 )
+blend_times = [  ]
+
+[node name="scene3Darken" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 3000, -8.46282 )
+scale = Vector2( 1, 0.602432 )
+texture = ExtResource( 6 )
+vframes = 2
+hframes = 2
+_sections_unfolded = [ "Animation", "Transform", "Z Index" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scene3Darken" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/flip_A = SubResource( 14 )
+anims/flip_N = SubResource( 15 )
+anims/return_A = SubResource( 16 )
+anims/return_N = SubResource( 17 )
+blend_times = [  ]
+
+[node name="scene4" type="Sprite" parent="." index="7"]
 
 position = Vector2( 4500, 0 )
 scale = Vector2( 32.953, 20.3029 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="menuScene" type="Sprite" parent="." index="5"]
+[node name="scene4Darken" type="Sprite" parent="." index="8"]
 
-position = Vector2( 0, 800 )
-scale = Vector2( 16.7599, 10.5766 )
-texture = ExtResource( 6 )
+visible = false
+position = Vector2( 4500, 0 )
+scale = Vector2( 32.953, 20.3029 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Restart" type="Button" parent="." index="6"]
+[node name="CabinetZoom" type="Sprite" parent="." index="9"]
+
+position = Vector2( 1500, 796.874 )
+scale = Vector2( 1, 0.603336 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="OpenCab" type="Sprite" parent="." index="10"]
+
+position = Vector2( 3000, 798.002 )
+scale = Vector2( 1, 0.614222 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="menuScene" type="Sprite" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 28.6109, 865.569 )
+scale = Vector2( 1.07525, 0.800707 )
+texture = ExtResource( 10 )
+vframes = 3
+hframes = 2
+frame = 1
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="menuScene" index="0"]
+
+root_node = NodePath("..")
+autoplay = "coffee"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/coffee = SubResource( 10 )
+blend_times = [  ]
+
+[node name="Restart" type="Button" parent="." index="12"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -47.0
-margin_top = 731.0
-margin_right = 10.0
-margin_bottom = 751.0
+margin_left = 244.0
+margin_top = 676.0
+margin_right = 301.0
+margin_bottom = 696.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -208,18 +535,18 @@ group = null
 text = "Restart"
 flat = false
 align = 1
-script = ExtResource( 7 )
+script = ExtResource( 11 )
 
-[node name="Close" type="Button" parent="." index="7"]
+[node name="Close" type="Button" parent="." index="13"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -63.0
-margin_top = 769.0
-margin_right = 24.0
-margin_bottom = 789.0
+margin_left = 233.0
+margin_top = 722.0
+margin_right = 320.0
+margin_bottom = 742.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -234,18 +561,18 @@ group = null
 text = "Close Menu"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 12 )
 
-[node name="Exit" type="Button" parent="." index="8"]
+[node name="Exit" type="Button" parent="." index="14"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -38.0
-margin_top = 809.0
-margin_right = -3.0
-margin_bottom = 829.0
+margin_left = 261.0
+margin_top = 764.0
+margin_right = 296.0
+margin_bottom = 784.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -260,9 +587,9 @@ group = null
 text = "Exit"
 flat = false
 align = 1
-script = ExtResource( 9 )
+script = ExtResource( 13 )
 
-[node name="Cam" type="Node2D" parent="." index="9"]
+[node name="Cam" type="Node2D" parent="." index="15"]
 
 editor/display_folded = true
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -302,10 +629,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -150.0
-margin_top = 227.0
-margin_right = 122.0
-margin_bottom = 273.0
+margin_left = -163.0
+margin_top = 241.0
+margin_right = 109.0
+margin_bottom = 287.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -313,6 +640,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Grow Direction", "Mouse" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="GridContainer" type="GridContainer" parent="Cam/Camera2D/Panel" index="0"]
 
@@ -329,7 +659,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 7
-script = ExtResource( 10 )
+script = ExtResource( 14 )
 _sections_unfolded = [ "Mouse" ]
 
 [node name="Button" type="Button" parent="Cam/Camera2D" index="1"]
@@ -356,7 +686,7 @@ group = null
 text = ">"
 flat = false
 align = 1
-script = ExtResource( 11 )
+script = ExtResource( 15 )
 
 [node name="Button2" type="Button" parent="Cam/Camera2D" index="2"]
 
@@ -382,7 +712,7 @@ group = null
 text = "<"
 flat = false
 align = 1
-script = ExtResource( 11 )
+script = ExtResource( 15 )
 
 [node name="Menu" type="Button" parent="Cam/Camera2D" index="3"]
 
@@ -390,10 +720,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -452.0
-margin_top = -288.0
-margin_right = -375.0
-margin_bottom = -268.0
+margin_left = -506.0
+margin_top = -289.0
+margin_right = -429.0
+margin_bottom = -269.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -408,9 +738,9 @@ group = null
 text = "Menu"
 flat = false
 align = 1
-script = ExtResource( 12 )
+script = ExtResource( 16 )
 
-[node name="sc1FrameSwitch" type="Area2D" parent="." index="10"]
+[node name="sc1FrameSwitch" type="Area2D" parent="." index="16"]
 
 editor/display_folded = true
 position = Vector2( -336.743, -74.394 )
@@ -421,7 +751,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 13 )
+script = ExtResource( 17 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -432,10 +762,10 @@ position = Vector2( -3.58064, 13.9961 )
 scale = Vector2( 13.269, 9.8219 )
 shape = SubResource( 3 )
 
-[node name="sc2FrameSwitch" type="Area2D" parent="." index="11"]
+[node name="sc2FrameSwitch" type="Area2D" parent="." index="17"]
 
 editor/display_folded = true
-position = Vector2( 1408.22, -162.694 )
+position = Vector2( 1405.5, -166.775 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -443,7 +773,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 13 )
+script = ExtResource( 17 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -453,6 +783,118 @@ __meta__ = {
 position = Vector2( -5.19446, 19.5977 )
 scale = Vector2( 11.8301, 8.99086 )
 shape = SubResource( 3 )
+
+[node name="sc3FrameSwitch1" type="Area2D" parent="." index="18"]
+
+editor/display_folded = true
+position = Vector2( 2624.31, -199.912 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch1" index="0"]
+
+position = Vector2( -5.19446, 19.5977 )
+scale = Vector2( 11.8301, 8.99086 )
+shape = SubResource( 3 )
+
+[node name="sc3FrameSwitch2" type="Area2D" parent="." index="19"]
+
+editor/display_folded = true
+position = Vector2( 3078.58, -204.823 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sc3FrameSwitch2" index="0"]
+
+position = Vector2( -5.19446, 19.5977 )
+scale = Vector2( 11.8301, 8.99086 )
+shape = SubResource( 3 )
+
+[node name="IngredientCabinet" type="Area2D" parent="." index="20"]
+
+editor/display_folded = true
+position = Vector2( 3347.2, -110.227 )
+scale = Vector2( 1, 1.63231 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientCabinet" index="0"]
+
+position = Vector2( -5.19446, 19.5977 )
+scale = Vector2( 11.8301, 8.99086 )
+shape = SubResource( 3 )
+
+[node name="CabinetCode" type="LineEdit" parent="." index="21"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1471.0
+margin_top = 804.0
+margin_right = 1529.0
+margin_bottom = 828.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+script = ExtResource( 19 )
+
+[node name="LightSwitch" type="Area2D" parent="." index="22"]
+
+position = Vector2( -154.534, 74.3525 )
+scale = Vector2( 2.72624, 2.78844 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightSwitch" index="0"]
+
+shape = SubResource( 11 )
 
 [connection signal="pressed" from="Button" to="Cam/Camera2D/Panel/GridContainer" method="_on_Button_pressed"]
 
@@ -471,5 +913,15 @@ shape = SubResource( 3 )
 [connection signal="input_event" from="sc1FrameSwitch" to="sc1FrameSwitch" method="_on_sc1FrameSwitch_input_event"]
 
 [connection signal="input_event" from="sc2FrameSwitch" to="sc2FrameSwitch" method="_on_sc2FrameSwitch_input_event"]
+
+[connection signal="input_event" from="sc3FrameSwitch1" to="sc3FrameSwitch1" method="_on_sc3FrameSwitch1_input_event"]
+
+[connection signal="input_event" from="sc3FrameSwitch2" to="sc3FrameSwitch2" method="_on_sc3FrameSwitch2_input_event"]
+
+[connection signal="input_event" from="IngredientCabinet" to="IngredientCabinet" method="_on_IngredientCabinet_input_event"]
+
+[connection signal="text_changed" from="CabinetCode" to="CabinetCode" method="_on_CabinetCode_text_changed"]
+
+[connection signal="input_event" from="LightSwitch" to="LightSwitch" method="_on_LightSwitch_input_event"]
 
 
