@@ -5,6 +5,7 @@ extends Area2D
 # var b = "textvar"
 var pos = Vector2(1500,800)
 onready var camPos = get_node("../Cam")
+onready var button = get_node("../Cam/Camera2D/Button3")
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -20,4 +21,5 @@ func _ready():
 func _on_IngredientCabinet_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		camPos.set_position(pos)
+		button.show()
 	pass # replace with function body

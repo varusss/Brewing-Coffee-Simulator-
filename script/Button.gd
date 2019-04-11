@@ -55,3 +55,8 @@ func _on_Button2_pressed():
 	if num < 1:
 		num = 4;
 	pass # replace with function body
+
+
+func _on_Button3_pressed():
+	cam.set_position(pos3)
+	pass # replace with function body

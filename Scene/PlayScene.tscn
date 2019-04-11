@@ -1,25 +1,30 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=44 format=2]
 
-[ext_resource path="res://[[Coffee Brewery/DoorScene.png" type="Texture" id=1]
-[ext_resource path="res://image/FDoorD.png" type="Texture" id=2]
-[ext_resource path="res://Scene/Sprite.gd" type="Script" id=3]
-[ext_resource path="res://[[Coffee Brewery/KitchenScene.png" type="Texture" id=4]
-[ext_resource path="res://image/FBarD.png" type="Texture" id=5]
-[ext_resource path="res://[[Coffee Brewery/Travel_Book_Wall.png" type="Texture" id=6]
-[ext_resource path="res://image/New Piskel-4.png.png" type="Texture" id=7]
-[ext_resource path="res://[[Coffee Brewery/shut_cabinent.png" type="Texture" id=8]
-[ext_resource path="res://[[Coffee Brewery/Open.png" type="Texture" id=9]
-[ext_resource path="res://image/CoffeeBrewing.png" type="Texture" id=10]
-[ext_resource path="res://script/exit.gd" type="Script" id=11]
-[ext_resource path="res://script/Close.gd" type="Script" id=12]
-[ext_resource path="res://script/Exit.gd" type="Script" id=13]
-[ext_resource path="res://Godot-Inventory-master/Inventory.gd" type="Script" id=14]
-[ext_resource path="res://script/Button.gd" type="Script" id=15]
-[ext_resource path="res://script/Menu.gd" type="Script" id=16]
-[ext_resource path="res://script/PictureFrame.gd" type="Script" id=17]
-[ext_resource path="res://script/IngredientCabinet.gd" type="Script" id=18]
-[ext_resource path="res://script/LineEdit.gd" type="Script" id=19]
-[ext_resource path="res://script/LightSwitch.gd" type="Script" id=20]
+[ext_resource path="res://script/PlayScene1.gd" type="Script" id=1]
+[ext_resource path="res://[[Coffee Brewery/DoorScene.png" type="Texture" id=2]
+[ext_resource path="res://image/FDoorD.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Sprite.gd" type="Script" id=4]
+[ext_resource path="res://[[Coffee Brewery/KitchenScene.png" type="Texture" id=5]
+[ext_resource path="res://image/FBarD.png" type="Texture" id=6]
+[ext_resource path="res://[[Coffee Brewery/Travel_Book_Wall.png" type="Texture" id=7]
+[ext_resource path="res://[[Coffee Brewery/darl_travel_book_2.png" type="Texture" id=8]
+[ext_resource path="res://[[Coffee Brewery/Stove_Wall_1(1).png" type="Texture" id=9]
+[ext_resource path="res://[[Coffee Brewery/dark_kitchen.png" type="Texture" id=10]
+[ext_resource path="res://[[Coffee Brewery/Open.png" type="Texture" id=11]
+[ext_resource path="res://[[Coffee Brewery/shut_cabinent.png" type="Texture" id=12]
+[ext_resource path="res://image/CoffeeBrewing.png" type="Texture" id=13]
+[ext_resource path="res://script/exit.gd" type="Script" id=14]
+[ext_resource path="res://script/Close.gd" type="Script" id=15]
+[ext_resource path="res://script/Exit.gd" type="Script" id=16]
+[ext_resource path="res://Godot-Inventory-master/Inventory.gd" type="Script" id=17]
+[ext_resource path="res://script/Button.gd" type="Script" id=18]
+[ext_resource path="res://script/Menu.gd" type="Script" id=19]
+[ext_resource path="res://script/PictureFrame.gd" type="Script" id=20]
+[ext_resource path="res://script/IngredientCabinet.gd" type="Script" id=21]
+[ext_resource path="res://script/LineEdit.gd" type="Script" id=22]
+[ext_resource path="res://script/StoveCode.gd" type="Script" id=23]
+[ext_resource path="res://script/DrawCode.gd" type="Script" id=24]
+[ext_resource path="res://script/LightSwitch.gd" type="Script" id=25]
 
 [sub_resource type="Animation" id=1]
 
@@ -287,6 +292,25 @@ tracks/0/keys = {
 "values": [ 1, 0 ]
 }
 
+[sub_resource type="Animation" id=18]
+
+resource_name = "stoveOn"
+length = 0.4
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
 [sub_resource type="Animation" id=10]
 
 resource_name = "coffee"
@@ -319,13 +343,14 @@ extents = Vector2( 10, 10 )
 [node name="PlayScene" type="Node2D" index="0"]
 
 position = Vector2( 149.707, -227.142 )
+script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="scene1" type="Sprite" parent="." index="0"]
 
 editor/display_folded = true
 scale = Vector2( 0.809385, 0.524176 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 vframes = 2
 _sections_unfolded = [ "Animation", "Transform" ]
 
@@ -344,7 +369,7 @@ blend_times = [  ]
 
 visible = false
 scale = Vector2( 0.809385, 0.524176 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 vframes = 2
 _sections_unfolded = [ "Animation", "Transform" ]
 
@@ -371,14 +396,14 @@ shortcut = null
 group = null
 flat = false
 align = 1
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="scene2" type="Sprite" parent="." index="3"]
 
 editor/display_folded = true
 position = Vector2( 1500, 0 )
 scale = Vector2( 1.01726, 0.608756 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 vframes = 2
 _sections_unfolded = [ "Animation", "Transform" ]
 
@@ -399,7 +424,7 @@ editor/display_folded = true
 visible = false
 position = Vector2( 1500, 0 )
 scale = Vector2( 1.01726, 0.608756 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 vframes = 2
 _sections_unfolded = [ "Animation", "Transform" ]
 
@@ -417,9 +442,9 @@ blend_times = [  ]
 [node name="scene3" type="Sprite" parent="." index="5"]
 
 editor/display_folded = true
-position = Vector2( 3000, -8.46282 )
+position = Vector2( 3000, 0 )
 scale = Vector2( 1, 0.602432 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 vframes = 2
 hframes = 2
 _sections_unfolded = [ "Animation", "Transform", "Z Index" ]
@@ -443,9 +468,7 @@ editor/display_folded = true
 visible = false
 position = Vector2( 3000, -8.46282 )
 scale = Vector2( 1, 0.602432 )
-texture = ExtResource( 6 )
-vframes = 2
-hframes = 2
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Animation", "Transform", "Z Index" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scene3Darken" index="0"]
@@ -463,31 +486,48 @@ blend_times = [  ]
 
 [node name="scene4" type="Sprite" parent="." index="7"]
 
+editor/display_folded = true
 position = Vector2( 4500, 0 )
-scale = Vector2( 32.953, 20.3029 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
+scale = Vector2( 1, 0.602432 )
+texture = ExtResource( 9 )
+vframes = 2
+hframes = 2
+frame = 3
+_sections_unfolded = [ "Animation", "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scene4" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/stoveOn = SubResource( 18 )
+blend_times = [  ]
 
 [node name="scene4Darken" type="Sprite" parent="." index="8"]
 
 visible = false
 position = Vector2( 4500, 0 )
-scale = Vector2( 32.953, 20.3029 )
-texture = ExtResource( 7 )
+scale = Vector2( 1, 0.602432 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CabinetZoom" type="Sprite" parent="." index="9"]
+[node name="OpenCab" type="Sprite" parent="." index="9"]
+
+position = Vector2( 1500, 800 )
+scale = Vector2( 1, 0.614222 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CabinetZoom" type="Sprite" parent="." index="10"]
 
 position = Vector2( 1500, 796.874 )
 scale = Vector2( 1, 0.603336 )
-texture = ExtResource( 8 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="OpenCab" type="Sprite" parent="." index="10"]
-
-position = Vector2( 3000, 798.002 )
-scale = Vector2( 1, 0.614222 )
-texture = ExtResource( 9 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="menuScene" type="Sprite" parent="." index="11"]
@@ -495,7 +535,7 @@ _sections_unfolded = [ "Transform" ]
 editor/display_folded = true
 position = Vector2( 28.6109, 865.569 )
 scale = Vector2( 1.07525, 0.800707 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 vframes = 3
 hframes = 2
 frame = 1
@@ -535,7 +575,7 @@ group = null
 text = "Restart"
 flat = false
 align = 1
-script = ExtResource( 11 )
+script = ExtResource( 14 )
 
 [node name="Close" type="Button" parent="." index="13"]
 
@@ -561,7 +601,7 @@ group = null
 text = "Close Menu"
 flat = false
 align = 1
-script = ExtResource( 12 )
+script = ExtResource( 15 )
 
 [node name="Exit" type="Button" parent="." index="14"]
 
@@ -587,15 +627,12 @@ group = null
 text = "Exit"
 flat = false
 align = 1
-script = ExtResource( 13 )
+script = ExtResource( 16 )
 
 [node name="Cam" type="Node2D" parent="." index="15"]
 
 editor/display_folded = true
 _sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Camera2D" type="Camera2D" parent="Cam" index="0"]
 
@@ -625,6 +662,7 @@ _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Material", "Offset", "
 
 [node name="Panel" type="Panel" parent="Cam/Camera2D" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -659,7 +697,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 7
-script = ExtResource( 14 )
+script = ExtResource( 17 )
 _sections_unfolded = [ "Mouse" ]
 
 [node name="Button" type="Button" parent="Cam/Camera2D" index="1"]
@@ -686,7 +724,7 @@ group = null
 text = ">"
 flat = false
 align = 1
-script = ExtResource( 15 )
+script = ExtResource( 18 )
 
 [node name="Button2" type="Button" parent="Cam/Camera2D" index="2"]
 
@@ -712,7 +750,7 @@ group = null
 text = "<"
 flat = false
 align = 1
-script = ExtResource( 15 )
+script = ExtResource( 18 )
 
 [node name="Menu" type="Button" parent="Cam/Camera2D" index="3"]
 
@@ -738,7 +776,54 @@ group = null
 text = "Menu"
 flat = false
 align = 1
-script = ExtResource( 16 )
+script = ExtResource( 19 )
+
+[node name="Button3" type="Button" parent="Cam/Camera2D" index="4"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -37.0
+margin_top = 213.0
+margin_right = -21.0
+margin_bottom = 233.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "^"
+flat = false
+align = 1
+script = ExtResource( 18 )
+
+[node name="Label" type="Label" parent="Cam/Camera2D" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -491.0
+margin_top = -254.0
+margin_right = -451.0
+margin_bottom = -240.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="sc1FrameSwitch" type="Area2D" parent="." index="16"]
 
@@ -751,7 +836,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 17 )
+script = ExtResource( 20 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -773,7 +858,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 17 )
+script = ExtResource( 20 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -795,7 +880,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 17 )
+script = ExtResource( 20 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -817,7 +902,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 17 )
+script = ExtResource( 20 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -840,7 +925,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 18 )
+script = ExtResource( 21 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -874,9 +959,59 @@ placeholder_alpha = 0.6
 caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
-script = ExtResource( 19 )
+script = ExtResource( 22 )
 
-[node name="LightSwitch" type="Area2D" parent="." index="22"]
+[node name="StoveCode" type="LineEdit" parent="." index="22"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4356.0
+margin_top = -6.0
+margin_right = 4531.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+script = ExtResource( 23 )
+
+[node name="DrawCode" type="LineEdit" parent="." index="23"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4117.0
+margin_top = 71.0
+margin_right = 4184.0
+margin_bottom = 95.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+script = ExtResource( 24 )
+
+[node name="LightSwitch" type="Area2D" parent="." index="24"]
 
 position = Vector2( -154.534, 74.3525 )
 scale = Vector2( 2.72624, 2.78844 )
@@ -887,7 +1022,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 20 )
+script = ExtResource( 25 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -910,6 +1045,8 @@ shape = SubResource( 11 )
 
 [connection signal="pressed" from="Cam/Camera2D/Menu" to="Cam/Camera2D/Menu" method="_on_Menu_pressed"]
 
+[connection signal="pressed" from="Cam/Camera2D/Button3" to="Cam/Camera2D/Button3" method="_on_Button3_pressed"]
+
 [connection signal="input_event" from="sc1FrameSwitch" to="sc1FrameSwitch" method="_on_sc1FrameSwitch_input_event"]
 
 [connection signal="input_event" from="sc2FrameSwitch" to="sc2FrameSwitch" method="_on_sc2FrameSwitch_input_event"]
@@ -921,6 +1058,10 @@ shape = SubResource( 11 )
 [connection signal="input_event" from="IngredientCabinet" to="IngredientCabinet" method="_on_IngredientCabinet_input_event"]
 
 [connection signal="text_changed" from="CabinetCode" to="CabinetCode" method="_on_CabinetCode_text_changed"]
+
+[connection signal="text_changed" from="StoveCode" to="StoveCode" method="_on_StoveCode_text_changed"]
+
+[connection signal="text_changed" from="DrawCode" to="DrawCode" method="_on_DrawCode_text_changed"]
 
 [connection signal="input_event" from="LightSwitch" to="LightSwitch" method="_on_LightSwitch_input_event"]
 
